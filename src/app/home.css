@@ -5,10 +5,6 @@
   outline: none;
 }
 
-/*
-CIRCLE ANIMATION
-*/
-
 .timeline .circle:hover {
   position: relative;
 
@@ -23,19 +19,6 @@ CIRCLE ANIMATION
   height: 60px;
   width: 60px;
 }
-
-/* .timeline .circle:hover:before,
-.timeline .circle:hover:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border-radius: 50%;
-    border: 1px solid red;
-} */
 
 .timeline .circle:hover:before {
   -webkit-animation: ripple 1s linear infinite;
@@ -107,7 +90,6 @@ CIRCLE ANIMATION
   position: relative;
   display: inline-block;
   list-style-type: none;
-  /* width variable según cercanía tiempo */
   width: 160px;
   height: 3px;
   background: black;
@@ -212,183 +194,3 @@ CIRCLE ANIMATION
   width: 45px;
   height: 45px;
 }
-
-/* EVENTS SECTION
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-nav.archive-links {
-  background-color: #fff;
-  box-sizing: content-box;
-  padding: 0;
-  /* Ordered list with custom counter */
-  /* Style the title, date & comments of each entry */
-}
-
-nav.archive-links ol.ol-events {
-  counter-reset: li;
-  overflow: hidden;
-  border: 1px solid #d9d9d9;
-  margin: 0;
-  padding: 0px;
-}
-
-nav.archive-links ol.ol-events li {
-  float: left;
-  clear: left;
-  width: 100%;
-  margin: 0;
-  list-style: none;
-}
-
-nav.archive-links ol.ol-events,
-nav.archive-links ol.ol-events li,
-nav.archive-links ol.ol-events li a {
-  display: block;
-}
-
-nav.archive-links ol.ol-events li a {
-  font-size: 11px;
-  height: 29px;
-  position: relative;
-  text-decoration: none;
-}
-
-nav.archive-links ol.ol-events li .main-image:after,
-nav.archive-links ol.ol-events li .no-main-image:after {
-  color: #b7b7b7;
-  content: counter(li, decimal-leading-zero);
-  counter-increment: li;
-  font-size: 14px;
-  line-height: 29px;
-  height: 29px;
-  width: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  text-align: center;
-  font-weight: 100;
-  letter-spacing: 1px;
-}
-
-nav.archive-links li .main-image,
-nav.archive-links li .no-main-image {
-  float: left;
-  margin-right: 0.5em;
-  width: 30px;
-  height: 30px;
-  background: #e6e6e6;
-}
-
-nav.archive-links li .main-image.event-one,
-nav.archive-links li .no-main-image.event-one {
-  background: yellow;
-}
-
-nav.archive-links li .main-image.event-two,
-nav.archive-links li .no-main-image.event-two {
-  background: orange;
-}
-
-nav.archive-links li .main-image {
-  /*background-image: url('http://placekitten.com/g/200/200');*/
-  background-size: cover;
-  background-position: center center;
-}
-
-nav.archive-links a:link,
-nav.archive-links a:visited,
-nav.archive-links a:hover,
-nav.archive-links a:active {
-  color: #000000;
-}
-
-nav.archive-links ol.ol-events li a:hover .main-image:after,
-nav.archive-links ol.ol-events li a:hover .no-main-image:after {
-  color: #2690d8;
-}
-
-nav.archive-links ol.ol-events li a:active .main-image:after,
-nav.archive-links ol.ol-events li a:active .no-main-image:after,
-nav.archive-links ol.ol-events li.active a .main-image:after,
-nav.archive-links ol.ol-events li.active a .no-main-image:after {
-  color: #777;
-}
-
-nav.archive-links li + li {
-  border-top: 1px solid #d9d9d9;
-}
-
-nav.archive-links li span {
-  display: block;
-  line-height: 1em;
-}
-
-nav.archive-links span.link-title {
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding-top: 0.3em;
-  font-size: 1em;
-}
-
-nav.archive-links span.link-excerpt {
-  color: #c3c3c3;
-}
-
-/* GENERAL MEDIA QUERIES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* @media screen and (max-width: 599px) {
-  .timeline ol,
-  .timeline ol li {
-    width: auto; 
-  }
-  
-  .timeline ol {
-    padding: 0;
-    transform: none !important;
-  }
-  
-  .timeline ol li {
-    display: block;
-    height: auto;
-    background: transparent;
-  }
-  
-  .timeline ol li:first-child {
-    margin-top: 25px;
-  }
-  
-  .timeline ol li:not(:first-child) {
-    margin-left: auto;
-  }
-  
-  .timeline ol li div {
-    width: 94%;
-    height: auto !important;
-    margin: 0 auto 25px;
-  }
-  
-  .timeline ol li div {
-    position: static;
-  }
-  
-  .timeline ol li:nth-child(odd) div {
-    transform: none;
-  }
-  
-  .timeline ol li:nth-child(odd) div::before,
-  .timeline ol li:nth-child(even) div::before {
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    border: none;
-    border-left: 1px solid white;
-    height: 25px;
-  }
-  
-  .timeline ol li:last-child,
-  .timeline ol li:nth-last-child(2) div::before,
-  .timeline ol li:not(:last-child)::after,
-  .timeline .arrows {
-    display: none;
-  }
-} */

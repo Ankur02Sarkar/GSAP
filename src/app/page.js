@@ -11,7 +11,7 @@ export default function Home() {
           <span className="show-info circle" />
         </li>
         <li />
-        <li className="timelineItem flip">
+        <li className="timelineItem">
           <div className="just-date">
             <h1 className="float-end">02</h1>
             <p className="timeLineText">Design Concept Development</p>
@@ -19,7 +19,7 @@ export default function Home() {
           <span className="show-info circle" />
         </li>
         <li />
-        <li className="timelineItem">
+        <li className="timelineItem flip">
           <div className="just-date">
             <h1 className="float-end">03</h1>
             <p className="timeLineText">Materails Selection</p>
