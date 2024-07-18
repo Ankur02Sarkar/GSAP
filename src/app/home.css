@@ -5,72 +5,6 @@
   outline: none;
 }
 
-.timeline .circle:hover {
-  position: relative;
-
-  -webkit-transition: height 0.25s ease, width 0.25s ease;
-  transition: height 0.25s ease, width 0.25s ease;
-
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.timeline .circle {
-  height: 60px;
-  width: 60px;
-}
-
-.timeline .circle:hover:before {
-  -webkit-animation: ripple 1s linear infinite;
-  animation: ripple 1s linear infinite;
-}
-
-.timeline .circle:hover:after {
-  -webkit-animation: ripple 1s linear 0.5s infinite;
-  animation: ripple 1s linear 0.5s infinite;
-}
-
-.timeline .circle:before,
-.timeline .circle:after {
-  -webkit-animation: none;
-  animation: none;
-}
-
-@-webkit-keyframes ripple {
-  0% {
-    -webkit-transform: scale(1);
-  }
-
-  75% {
-    -webkit-transform: scale(2.75);
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scale(4);
-    opacity: 0;
-  }
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(1);
-  }
-
-  75% {
-    transform: scale(2.75);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
-
-/* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
@@ -182,15 +116,12 @@
   margin-top: 50px;
 }
 
-.timeline .arrows .arrow__prev {
-  margin-right: 20px;
-}
+@keyframes cambio {
+  from {
+    margin-left: 0%;
+  }
 
-.timeline .disabled {
-  opacity: 0.5;
-}
-
-.timeline .arrows img {
-  width: 45px;
-  height: 45px;
+  to {
+    margin-left: -100%;
+  }
 }
