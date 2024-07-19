@@ -1,3 +1,6 @@
+.timelineWrap {
+  overflow: hidden;
+}
 .timeline button {
   background: transparent;
   border: none;
@@ -8,6 +11,7 @@
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
+  width: 200vw;
 }
 
 .timeline > ol {
