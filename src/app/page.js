@@ -1,5 +1,43 @@
+"use client";
+import { useEffect } from "react";
 import "./home.css";
+
 export default function Home() {
+  useEffect(() => {
+    const timelineItems = document.querySelectorAll(".timelineItem");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio > 0) {
+            const boundingRect = entry.boundingClientRect;
+            const viewportWidth = window.innerWidth;
+            if (boundingRect.left <= viewportWidth * 0.25) {
+              entry.target.classList.add("flip");
+            } else {
+              entry.target.classList.remove("flip");
+            }
+          } else {
+            entry.target.classList.remove("flip");
+          }
+        });
+      },
+      {
+        threshold: [0, 1],
+      }
+    );
+
+    timelineItems.forEach((item) => {
+      observer.observe(item);
+    });
+
+    return () => {
+      timelineItems.forEach((item) => {
+        observer.unobserve(item);
+      });
+    };
+  }, []);
+
   return (
     <div className="timelineWrap">
       <section className="timeline">
@@ -12,7 +50,7 @@ export default function Home() {
             <span className="show-info circle" />
           </li>
           <li />
-          <li className="timelineItem flip">
+          <li className="timelineItem">
             <div className="just-date">
               <h1 className="float-end">02</h1>
               <p className="timeLineText">Design Concept Development</p>

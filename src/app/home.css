@@ -19,8 +19,6 @@
   width: 100vw;
   padding: 100px 0;
   transition: all 1s;
-
-  /* AutoScroll */
   animation: cambio 20s infinite linear;
 }
 
@@ -52,7 +50,7 @@
   height: 30px;
   transform: translateY(-50%);
   border-radius: 50%;
-  background: #f8780f;
+  background: linear-gradient(to bottom, #17736f, #2bd9d1);
 }
 
 .timeline > ol > li:not(:last-child) .just-date {
