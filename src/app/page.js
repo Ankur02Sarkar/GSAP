@@ -15,7 +15,7 @@ const Home = () => {
           <Link key={effect} href={`/${effect}`}>
             <div className="block bg-white p-4 rounded-lg shadow hover:shadow-lg transition">
               <div className="text-center text-xl font-semibold text-gray-700">
-                {effect}
+                Effect {String(effect.slice(6)).padStart(3, "0")}
               </div>
             </div>
           </Link>
