@@ -1,9 +1,13 @@
-import React from 'react';
+"use client";
+import React from "react";
+import Effect070 from "./Effect070";
 
 const page = () => {
   return (
-    <div>Effect 070</div>
+    <div>
+      <Effect070 />
+    </div>
   );
-}
+};
 
 export default page;

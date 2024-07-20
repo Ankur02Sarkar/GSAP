@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Infinity from "@/assets/infinity.gif";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -35,11 +36,13 @@ const Navbar = () => {
   return (
     <div className="bg-gray-800 p-4 flex items-center justify-between">
       <div className="flex items-center">
-        <Image
-          src={Infinity}
-          alt="Logo"
-          className="h-10 w-10 mr-4 rounded-full object-cover"
-        />
+        <Link href={"/"}>
+          <Image
+            src={Infinity}
+            alt="Logo"
+            className="h-10 w-10 mr-4 rounded-full object-cover"
+          />
+        </Link>
         <span className="text-white font-bold text-xl">Navbar</span>
       </div>
       <div className="relative">

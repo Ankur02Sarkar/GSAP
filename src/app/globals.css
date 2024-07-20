@@ -67,3 +67,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+h1{
+  text-align: center;
+  margin: 1rem;
+}
