@@ -39,6 +39,7 @@ const Navbar = () => {
         <Link href={"/"}>
           <Image
             src={Infinity}
+            unoptimized
             alt="Logo"
             className="h-10 w-10 mr-4 rounded-full object-cover"
           />
